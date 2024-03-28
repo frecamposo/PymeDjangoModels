@@ -1,0 +1,161 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Juegos: Centro Juegos</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body style="background-color: black">
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+
+    ></script>
+    <div style="background-color: black; width: 100%">
+      <div class="izq">
+        <img src="{% static 'img/logo.png' %}" alt="" width="30%" />
+      </div>
+      <div class="der">
+        Av. Las Tranqueras #3352 Las Condes, Santiago Fono: +56 98525662
+      </div>
+    </div>
+    <div style="width: 100%; text-align: center">
+      
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">CJ: Juegos</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="{% url 'IND' %}">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Quienes Somos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'FORM' %}">Formulario Registro</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Categorias
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="{% url 'ACC' %}">Accion</a></li>
+                      <li><a class="dropdown-item" href="{% url 'AVE' %}">Aventura</a></li>
+                      <li><a class="dropdown-item" href="{% url 'TER' %}">Terror</a></li>
+                      <li><a class="dropdown-item" href="{% url 'CLA' %}">Clasicos</a></li>
+                      <li><a class="dropdown-item" href="{% url 'INF' %}">Infantil</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Busqueda..." aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+
+
+    </div>
+    <br>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'img/logo_terror.jpeg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Terror</h5>
+                  <p class="card-text">El Ente, un ser sobrenatural que proviene de la antigua red de sangre, se despierta de su letargo ...</p>
+                  <a href="#" class="btn btn-primary">Visualizar</a>
+                </div>
+              </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'img/aventura.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Aventura</h5>
+                  <p class="card-text">Entre las leyendas que nos llegan del pasado remoto,«Hace mucho tiempo existió un reino que ocultaba...</p>
+                  <a href="#" class="btn btn-primary">Visualizar</a>
+                </div>
+              </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'img/accion.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Accion</h5>
+                  <p class="card-text">Está diseñado como un juego de jugador contra entorno, con cuatro jugadores que cooperan para alcanzar...</p>
+                  <a href="#" class="btn btn-primary">Visualizar</a>
+                </div>
+              </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'img/retros.jpeg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Clasico</h5>
+                  <p class="card-text">Sonic Adventure es un juego de plataformas en 3D con elementos de acción y rol. Los jugadores controlan...</p>
+                  <a href="#" class="btn btn-primary">Visualizar</a>
+                </div>
+              </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'img/infantil.jpeg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Infantil</h5>
+                  <p class="card-text">Roblox tiene una historia muy larga debido a todo lo que ha ocurrido en la comunidad y lo que han ido añadiendo...</p>
+                  <a href="#" class="btn btn-primary">Visualizar</a>
+                </div>
+              </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'img/STBC-blog-opt-1-1024x640.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Star Trek: Bridge Crew</h5>
+                  <p class="card-text">El juego se juega a través de cuatro papeles: capitán, oficial táctico, ingeniero y oficial de timón. <p>
+                  <a href="#" class="btn btn-primary">Visualizar</a>
+                </div>
+              </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'img/maxresdefault.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Leisure Suit Larry</h5>
+                  <p class="card-text">Leisure Suit Larry: Reloaded es una aventura gráfica lanzada el 27 de junio de 2013 por N-Fusion Interactive</p>
+                  <a href="#" class="btn btn-primary">Visualizar</a>
+                </div>
+              </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'img/UPUWRVNMGFAQDLCIJIGVZFWJ7A.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">WWE 2K23</h5>
+                  <p class="card-text">WWE 2K23 es un videojuego de lucha libre profesional desarrollado por Visual Concepts y publicado por 2K Sports.</p>
+                  <a href="#" class="btn btn-primary">Visualizar</a>
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
+
+   <footer>
+    Desarrollo Web 2024 - CasiWeb S.A
+   </footer>
+  </body>
+</html>

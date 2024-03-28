@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+}
+body {
+    background-image: url('../img/3425081.jpg') 
+}
+div nav{
+    display: flex;
+    font-size: 25px;
+    color: bisque;
+    padding: 15px;
+    flex-wrap: wrap;
+    list-style: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: brown;
+}
+.der{
+    color: antiquewhite;
+    text-align: right;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div nav a{
+    text-decoration: none;
+    color: aqua;
+}
+div nav a:hover{
+    color: rgb(20, 97, 97);
+}
+
+div nav li {
+    text-decoration: none;
+    margin: 15px;
+}
+td img{
+    width: 350px;
+    height: 200px;
+    border-radius: 10px ;
+    border: solid white 2px;
+}
+td img:hover{
+   opacity: 0.5;
+}
+
+.titulos_juegos{
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.titulos_juegos td{
+   background-color: rgb(198, 164, 118);
+   padding: 10px;
+   border-radius: 5px;
+}
+
+.titulos_juegos_lista{
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 100%;
+}
+.titulos_juegos_lista td{
+    background-color: rgb(198, 164, 118);
+    padding: 10px;
+    font-size: x-large;
+    padding: 15px;
+    border-radius: 5px;
+ }
+ .nombre_video{
+    color: rgb(8, 8, 8);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 218, 9);
+    font-size: x-large;
+    width: 500px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+ .descripcion_video{
+    background-color: white;
+    margin-left: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+ .precio_video{
+    background-color: white;
+    margin-left: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 10px;
+ }
+ .descripcion{
+    width: 750px;
+    height: 200px;
+    background-color: white;
+    border-radius: 5px;
+   
+ }
+ .titulo{
+    background-color: white;
+    margin-left: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+
+
+ footer{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: aquamarine;
+ }
+
+ form div{
+    padding: 5px;
+ }

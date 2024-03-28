@@ -1,0 +1,172 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Juegos: Centro Juegos : Categoria Accion</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  </head>
+  <body style="background-color: black">
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+
+  ></script>
+
+    <div style="background-color: black; width: 100%">
+      <div class="izq">
+        <img src="{% static 'img/logo.png' %}" alt="" width="30%" />
+      </div>
+      <div class="der">
+        Av. Las Tranqueras #3352 Las Condes, Santiago Fono: +56 98525662
+      </div>
+    </div>
+    <div style="width: 100%; text-align: center">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">CJ: Juegos de Accion</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="{% url 'IND' %}">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Quienes Somos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'FORM' %}">Formulario Registro</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Categorias
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="{% url 'ACC' %}">Accion</a></li>
+                      <li><a class="dropdown-item" href="{% url 'AVE' %}">Aventura</a></li>
+                      <li><a class="dropdown-item" href="{% url 'TER' %}">Terror</a></li>
+                      <li><a class="dropdown-item" href="{% url 'CLA' %}">Clasicos</a></li>
+                      <li><a class="dropdown-item" href="{% url 'INF' %}">Infantil</a></li>
+                    </ul>
+                  </li>
+                </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Busqueda..." aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div style="width: 90%; margin-top: 50px;margin: auto;">
+     <!-- -----------------------------------------------------------------------------------------------------------------------  -->
+      <br>
+     <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <h2>Fortnite</h2>
+            </button>
+          </h2>
+
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <div class="row">
+                  <div class="col-3">
+                    <img src="{% static 'img/accion/fn.jpeg' %}" style="border-radius: 15px;" class="img-fluid" alt="" srcset="" />
+                  </div>
+                  <div class="col-9">
+                    <strong>Descripcion:</strong> Está diseñado como un juego de jugador contra entorno, con cuatro jugadores que cooperan para alcanzar un objetivo común en varias misiones. El juego se desarrolla después de que una tormenta mortal aparece en toda la Tierra, provocando que el 98% de la población desaparezca y los sobrevivientes sean atacados por cáscaras similares a zombis. Los jugadores asumen el papel de comandantes de refugios tipo base, recogen recursos, salvan sobrevivientes y defienden equipos que ayudan a recopilar datos sobre la tormenta o a hacer retroceder la tormenta. 
+                    <br>
+                    <hr>
+                    <strong>Precio:</strong><b>$70.000</b>
+                    <br>
+                    <hr>
+                    <a href="#" class="btn btn-primary">Comprar</a>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <H2>God of War</H2>
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <div class="row">
+ 
+                  <div class="col-3">
+                    <img src="{% static 'img/accion/gow.jpg' %}" style="border-radius: 15px;" class="img-fluid" alt="" srcset="" />
+                  </div>
+
+                  <div class="col-9">
+                    <strong>Descripcion:</strong> Después de recibir entrenamiento, Kratos, ya casado y con una hija, Calíope, se convierte en un gran general del ejército espartano y prometió no detenerse hasta que la gloria de Esparta estuviera en lo más alto. Las tácticas de sus ejércitos eran brutales, pero muy efectivas. Sin embargo, un día, un enfrentamiento contra el ejército bárbaro dio un resultado adverso para su armada. Con su ejército destruido y a punto de ser asesinado por el líder bárbaro, Kratos pide la ayuda de Ares, el dios de la guerra, ofreciéndole su vida a cambio. 
+                    <br>
+                    <hr>
+                    <strong>Precio:</strong><b>$70.000</b>
+                    <br>
+                    <hr>
+                    <a href="#" class="btn btn-primary">Comprar</a>
+                  </div>
+
+                </div>
+
+              
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <H2>Spider-Man 2</H2>
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              
+              <div class="row">
+                
+                <div class="col-3">
+                  <img src="{% static 'img/accion/spider2.jpg' %}" style="border-radius: 15px;" class="img-fluid" alt="" srcset="" />
+                </div>
+                
+                <div class="col-9">
+                  <strong>Descripcion:</strong> El juego se basa en la base establecida por sus predecesores, con énfasis en los múltiples estilos de juego que ofrecen Peter Parker y Miles Morales como sus respectivos Spider-Men. El juego amplía sus habilidades transversales y de combate existentes, incluidos nuevos dispositivos y trajes basados ​​​​en la red que se pueden desbloquear a medida que avanza la historia, además de presentar el traje de simbionte de Spider-Man, que le otorga a Parker habilidades completamente únicas que su apariencia jugable anterior.
+                  <br>
+                  <hr>
+                  <strong>Precio:</strong><b>$70.000</b>
+                  <br>
+                  <hr>
+                  <a href="#" class="btn btn-primary">Comprar</a>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+          </div>
+        </div>
+      
+        
+
+
+      </div>
+    </div>
+    <div style="text-align: center;margin-top: 50px;">
+        <div style="font-size: xx-large;color: wheat;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+            <a style="text-decoration: none;" href="{% url 'IND' %}">Inicio</a>
+        </div>
+    </div>
+  </body>
+</html>
