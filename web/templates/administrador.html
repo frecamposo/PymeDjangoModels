@@ -1,0 +1,382 @@
+{% extends "base.html" %}
+{% load static %}
+{% block centro %}
+
+   
+    <div style="width: 90%; margin-top: 50px; margin: auto">
+      <!-- -----------------------------------------------------------------------------------------------------------------------  -->
+      <div class="container">
+
+        <p class="d-inline-flex gap-1">
+          <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+            Ver el Perfil
+          </a>
+          <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+            Modificar el Perfil
+          </button>
+        </p>
+
+
+        <div class="collapse" id="collapseExample">
+          <div class="card card-body">
+            <div style="background-color: blue; margin-top: 20px; padding: 1rem">
+              <h2>Perfil del Usuario</h2>
+            </div>
+    
+            <form style="background-color: white; padding: 1rem" id="target">
+              <div class="form-group">
+                <div class="row">
+                  <div class="col">
+                    <label>Nombre:</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="txtnombre"
+                      aria-describedby="nombre"
+                      placeholder="ingrese nombre"
+                      required
+                      value="{{nombre}}" disabled
+                    />
+                  </div>
+    
+                  <div class="col">
+                    <label>Apellido Paterno:</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="txtape_pat"
+                      aria-describedby="ape_paterno"
+                      placeholder="apellido paterno"
+                      required
+                      value="{{apellido_pat}}" disabled
+                    />
+                  </div>
+    
+                  <div class="col">
+                    <label>Nombre Completo:</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="txtape_mat"
+                      aria-describedby="ape_materno"
+                      placeholder="apellido materno"
+                      required
+                      value="{{apellido_mat}}" disabled
+                    />
+                  </div>
+                </div>
+              </div>
+    
+              <div class="form-group">
+                <div class="row">
+                  <div class="col">
+                    <label>Nombre de Usuario:</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="nombreUsuario"
+                      aria-describedby="nombre"
+                      placeholder="ingrese nombre de usuario"
+                      required
+                      value={{user_name}} disabled
+                      
+                    />
+                  </div>
+                  <div class="col">
+                    <label>Password:</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="password"
+                      aria-describedby="nombre"
+                      placeholder="password"
+                      required
+                      pattern="(?=.*\d)(?=.*[A-Z]).*"
+                      minlength="6"
+                      maxlength="18"
+                      value="{{password}}" disabled
+                    />
+                  </div>
+                  <div class="col">
+                    <label>Repetir Password:</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="repetirPassword"
+                      aria-describedby="nombre"
+                      placeholder="repetir password"
+                      required
+                      value="{{password}}" disabled
+                    />
+                  </div>
+                </div>
+              </div>
+    
+              <div class="form-group">
+                <div class="row">
+                  <div class="col">
+                    <label>Correo Electronico</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="correoElectronico"
+                      placeholder="correo electronico"
+                      required
+                      value="{{correo}}" disabled
+                    />
+                  </div>
+                  <div class="col">
+                    <label>Fecha de Nacimiento:</label>
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="fechaNacimiento"
+                      name="fechaNacimiento"
+                      placeholder="Password"
+                      required
+                      value="{{fecha_naci}}" disabled
+                    />
+                  </div>
+                </div>
+              </div>
+    
+              <div class="form-group">
+                <div class="row">
+                  <div class="col">
+                    <label>Direccion de Despacho:</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="direccion"
+                      placeholder="direccion de despacho"
+                      value="{{direccion}}" disabled
+                    />
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="collapse" id="collapseExample2">
+          <div class="card card-body">
+            <div style="background-color: blue; margin-top: 20px; padding: 1rem">
+              <h2>Modificacion del Perfil del Usuario</h2>
+            </div>
+    
+            <form style="background-color: white; padding: 1rem" id="target" method="post">
+              {% csrf_token %}
+              <div class="form-group">
+                <div class="row">
+                  <div class="col">
+                    <label>Nombre:</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="txtnombre"
+                      name="txtnombre"
+                      aria-describedby="nombre"
+                      placeholder="ingrese nombre"
+                      required
+                      value="{{nombre}}"
+                    />
+                  </div>
+    
+                  <div class="col">
+                    <label>Apellido Paterno:</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="txtape_pat"
+                      name="txtape_pat"
+                      aria-describedby="ape_paterno"
+                      placeholder="apellido paterno"
+                      required
+                      value="{{apellido_pat}}"
+                    />
+                  </div>
+    
+                  <div class="col">
+                    <label>Nombre Completo:</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="txtape_mat"
+                      name="txtape_mat"
+                      aria-describedby="ape_materno"
+                      placeholder="apellido materno"
+                      required
+                      value="{{apellido_mat}}"
+                    />
+                  </div>
+                </div>
+              </div>
+    
+              <div class="form-group">
+                <div class="row">
+                  <div class="col">
+                    <label>Nombre de Usuario:</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="nombreUsuario"
+                      name="nombreUsuario"
+                      aria-describedby="nombre"
+                      placeholder="ingrese nombre de usuario"
+                      required
+                      value={{user_name}}
+                      
+                    />
+                  </div>
+                  <div class="col">
+                    <label>Password:</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="password"
+                      name="password"
+                      aria-describedby="nombre"
+                      placeholder="password"
+                      required
+                      pattern="(?=.*\d)(?=.*[A-Z]).*"
+                      minlength="6"
+                      maxlength="18"
+                      value="{{password}}"
+                    />
+                  </div>
+                  <div class="col">
+                    <label>Repetir Password:</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="repetirPassword"
+                      aria-describedby="nombre"
+                      placeholder="repetir password"
+                      required
+                      value="{{password}}"
+                    />
+                  </div>
+                </div>
+              </div>
+    
+              <div class="form-group">
+                <div class="row">
+                  <div class="col">
+                    <label>Correo Electronico</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="correoElectronico"
+                      name="correoElectronico"
+                      placeholder="correo electronico"
+                      required
+                      value="{{correo}}"
+                    />
+                  </div>
+                  <div class="col">
+                    <label>Fecha de Nacimiento:</label>
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="fechaNacimiento"
+                      name="fechaNacimiento"
+                      placeholder="Password"
+                      required
+                      value="{{fecha_naci}}"
+                    />
+                  </div>
+                </div>
+              </div>
+    
+              <div class="form-group">
+                <div class="row">
+                  <div class="col">
+                    <label>Direccion de Despacho:</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="direccion"
+                      name="direccion"
+                      placeholder="direccion de despacho"
+                      value="{{direccion}}"
+                    />
+                  </div>
+                </div>
+              </div>
+    
+              <button type="submit" id="validar" class="btn btn-primary">
+                Modificar
+              </button>
+              <button type="reset" class="btn btn-primary">Limpiar</button>
+            </form>
+          </div>
+        </div>
+
+
+      
+      </div>
+      <div><h1>{{mensaje}}</h1></div>
+      <!-- -------------------------------------------------------------------------------------------------------------------->
+      <div style="text-align: center; margin-top: 50px">
+        <div
+          style="
+            font-size: xx-large;
+            color: wheat;
+            font-family: Impact, Haettenschweiler, &quot;Arial Narrow Bold&quot;,
+              sans-serif;
+          "
+        >
+          <a style="text-decoration: none" href="../index.html">Inicio</a>
+        </div>
+      </div>
+    </div>
+    <script src="{% static '/js/jquery.js' %}"></script>
+    <script>
+
+      $("#target").on("submit", function (event) {
+        var pass1 = $("#password").val();
+        var pass2 = $("#repetirPassword").val();
+        if (pass1 != pass2) {
+          alert("contraseñas distintas");
+          return false;
+        }
+        var x = $("#fechaNacimiento").val();
+        const fecha = new Date();
+        const añoActual = fecha.getFullYear();
+        const diferencia = añoActual - parseInt(x.substring(0, 4));
+        if (diferencia < 13) {
+          alert("Edad menor a 13 años");
+          return false;
+        }
+        $("form").submit(function () {
+          alert("Submitted");
+        });
+        
+      });
+
+      $("#validar").on("click", function (event) {
+        var pass1 = $("#password").val();
+        var pass2 = $("#repetirPassword").val();
+        if (pass1 != pass2) {
+          alert("contraseñas distintas");
+          return false;
+        }
+      });
+
+      $("#validar2").on("click", function (event) {
+        var x = $("#fechaNacimiento").val();
+        alert(x.substring(0, 4));
+        const fecha = new Date();
+        const añoActual = fecha.getFullYear();
+        alert(añoActual);
+        const diferencia = añoActual - parseInt(x.substring(0, 4));
+        alert(diferencia);
+        if (diferencia < 13) {
+          alert("Edad menor a 13 años");
+          return false;
+        }
+        return true;
+      });
+    </script>
+{% endblock centro %}
+

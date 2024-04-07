@@ -1,0 +1,100 @@
+{% extends "base.html" %} {% load static %} {% block centro %}
+
+<div style="width: 90%; margin-top: 50px; margin: auto">
+  <!-- -----------------------------------------------------------------------------------------------------------------------  -->
+  <div class="container">
+    
+    <div style="background-color: white; padding: 10px;border-radius: 20px;width: 50%;margin: auto;border: solid 2px red;">
+      <div style="margin: auto;">
+        <h2>Login</h2>
+      </div>
+      <form method="post" action="{% url 'LOGIN' %}">
+      {% csrf_token %}
+        <div class="row">
+          <div class="col">
+            <div class="mb-3">
+              <label for="exampleInputUsuario" class="form-label">Nombre de Usuario</label>
+              <input type="text" class="form-control" id="exampleInputUsuario" name="exampleInputUsuario" aria-describedby="emailHelp"/>
+            </div>
+          </div>
+          <div class="col">
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label >
+              <input type="password" class="form-control" id="exampleInputPassword1" name="exampleInputPassword1"/>
+            </div>
+          </div>
+          <div class="row">  
+            <div class="mb-3 form-check">
+              <button type="submit" class="btn btn-primary">Acceder</button>
+              <button type="reset" class="btn btn-primary">Limpiar</button>
+            </div>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+  <div>
+    <h1>{{mensaje}}</h1>
+  </div>
+  <!-- -------------------------------------------------------------------------------------------------------------------->
+  <div style="text-align: center; margin-top: 50px">
+    <div
+      style="
+        font-size: xx-large;
+        color: wheat;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      "
+    >
+      <a style="text-decoration: none" href="../index.html">Inicio</a>
+    </div>
+  </div>
+</div>
+
+<script src="{% static '/js/jquery.js' %}"></script>
+<script>
+  $("#target").on("submit", function (event) {
+    var pass1 = $("#password").val();
+    var pass2 = $("#repetirPassword").val();
+    if (pass1 != pass2) {
+      alert("contraseñas distintas");
+      return false;
+    }
+    var x = $("#fechaNacimiento").val();
+    const fecha = new Date();
+    const añoActual = fecha.getFullYear();
+    const diferencia = añoActual - parseInt(x.substring(0, 4));
+    if (diferencia < 13) {
+      alert("Edad menor a 13 años");
+      return false;
+    }
+    $("form").submit(function () {
+      alert("Submitted");
+    });
+  });
+
+  $("#validar").on("click", function (event) {
+    var pass1 = $("#password").val();
+    var pass2 = $("#repetirPassword").val();
+    if (pass1 != pass2) {
+      alert("contraseñas distintas");
+      return false;
+    }
+  });
+
+  $("#validar2").on("click", function (event) {
+    var x = $("#fechaNacimiento").val();
+    alert(x.substring(0, 4));
+    const fecha = new Date();
+    const añoActual = fecha.getFullYear();
+    alert(añoActual);
+    const diferencia = añoActual - parseInt(x.substring(0, 4));
+    alert(diferencia);
+    if (diferencia < 13) {
+      alert("Edad menor a 13 años");
+      return false;
+    }
+    return true;
+  });
+</script>
+{% endblock centro %}
